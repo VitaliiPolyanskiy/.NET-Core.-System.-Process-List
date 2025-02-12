@@ -121,7 +121,7 @@ namespace ProcessList
                 procInfo.Arguments = "https://www.microsoft.com/uk-ua";
                 Process.Start(procInfo);
 
-                // Запускаем браузер Chrome с заданным адресом
+                // Запускаем браузер MSEdge с заданным адресом
                 procInfo = new ProcessStartInfo("msedge.exe");
                 procInfo.UseShellExecute = true;
                 procInfo.Arguments = "https://www.microsoft.com/uk-ua";
