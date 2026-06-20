@@ -1,17 +1,16 @@
-﻿
-namespace ProcessList
+﻿namespace ProcessList
 {
     partial class Form1
     {
         /// <summary>
-        ///  Required designer variable.
+        ///  Необхідна змінна дизайнера.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        ///  Clean up any resources being used.
+        ///  Очистити всі ресурси, що використовуються.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">true, якщо керовані ресурси мають бути видалені; інакше false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -24,8 +23,8 @@ namespace ProcessList
         #region Windows Form Designer generated code
 
         /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        ///  Необхідний метод для підтримки дизайнера — не змінюйте
+        ///  вміст цього методу за допомогою редактора коду.
         /// </summary>
         private void InitializeComponent()
         {
@@ -46,7 +45,7 @@ namespace ProcessList
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(252, 36);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Получить список всех процессов";
+            this.button1.Text = "Отримати список усіх процесів";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -64,7 +63,7 @@ namespace ProcessList
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(252, 36);
             this.button2.TabIndex = 2;
-            this.button2.Text = "Получить список оконных процессов";
+            this.button2.Text = "Отримати список віконних процесів";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -75,7 +74,7 @@ namespace ProcessList
             this.butGetNETBIOS.Name = "butGetNETBIOS";
             this.butGetNETBIOS.Size = new System.Drawing.Size(253, 24);
             this.butGetNETBIOS.TabIndex = 3;
-            this.butGetNETBIOS.Text = "Получить NETBIOS-имя сервера";
+            this.butGetNETBIOS.Text = "Отримати NETBIOS-ім'я сервера";
             this.butGetNETBIOS.UseVisualStyleBackColor = true;
             this.butGetNETBIOS.Click += new System.EventHandler(this.butGetNETBIOS_Click);
             // 
@@ -86,7 +85,7 @@ namespace ProcessList
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(253, 36);
             this.button3.TabIndex = 4;
-            this.button3.Text = "Получить имя текущего пользователя";
+            this.button3.Text = "Отримати ім'я поточного користувача";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -97,7 +96,7 @@ namespace ProcessList
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(252, 34);
             this.button4.TabIndex = 5;
-            this.button4.Text = "Запустить процесс Notepad";
+            this.button4.Text = "Запустити процес Notepad";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -108,7 +107,7 @@ namespace ProcessList
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(252, 34);
             this.button5.TabIndex = 6;
-            this.button5.Text = "Запустить процесс";
+            this.button5.Text = "Запустити процес";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -119,7 +118,7 @@ namespace ProcessList
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(252, 34);
             this.button6.TabIndex = 7;
-            this.button6.Text = "Закрыть все процессы Notepad";
+            this.button6.Text = "Закрити всі процеси Notepad";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -130,7 +129,7 @@ namespace ProcessList
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(252, 34);
             this.button7.TabIndex = 8;
-            this.button7.Text = "Получить все потоки процесса Visual Studio";
+            this.button7.Text = "Отримати всі потоки процесу Visual Studio";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
@@ -168,4 +167,3 @@ namespace ProcessList
         private System.Windows.Forms.Button button7;
     }
 }
-

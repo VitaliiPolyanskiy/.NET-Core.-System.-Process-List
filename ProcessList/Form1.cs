@@ -14,7 +14,7 @@ namespace ProcessList
         public Form1()
         {
             InitializeComponent();
-            // Получим контекст синхронизации для текущего потока 
+            // Отримаємо контекст синхронізації для поточного потоку 
             uiContext = SynchronizationContext.Current;
         }
 
@@ -26,12 +26,12 @@ namespace ProcessList
                 {
                     uiContext.Send(d => listBox1.Items.Clear(), null);
                     Process[] lp = Process.GetProcesses();
-                    foreach (Process p in lp) // список всех процессов, запущенных в системе
+                    foreach (Process p in lp) // список усіх процесів, запущених у системі
                     {
-                        // uiContext.Send отправляет синхронное сообщение в контекст синхронизации
-                        // SendOrPostCallback - делегат указывает метод, вызываемый при отправке сообщения в контекст синхронизации. 
-                        uiContext.Send(d => listBox1.Items.Add(p.ProcessName) /* Вызываемый делегат SendOrPostCallback */,
-                            null /* Объект, переданный делегату */);// получим имя очередного процесса
+                        // uiContext.Send відправляє синхронне повідомлення в контекст синхронізації
+                        // SendOrPostCallback - делегат указує метод, який викликається під час відправлення повідомлення в контекст синхронізації. 
+                        uiContext.Send(d => listBox1.Items.Add(p.ProcessName) /* Викликаний делегат SendOrPostCallback */,
+                            null /* Об'єкт, переданий делегату */);// отримаємо ім'я чергового процесу
                     }
                 }
                 catch (Exception ex)
@@ -49,11 +49,11 @@ namespace ProcessList
                 {
                     uiContext.Send(d => listBox1.Items.Clear(), null);
                     Process[] lp = Process.GetProcesses();
-                    foreach (Process p in lp) // список всех процессов, запущенных в системе
+                    foreach (Process p in lp) // список усіх процесів, запущених у системі
                     {
-                        if (p.MainWindowHandle != IntPtr.Zero) // только оконный процесс
+                        if (p.MainWindowHandle != IntPtr.Zero) // тільки віконний процес
                             uiContext.Send(d => listBox1.Items.Add(p.ProcessName), null);
-                    } 
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -92,9 +92,9 @@ namespace ProcessList
         {
             try
             {
-                // создаем новый процесс
+                // створюємо новий процес
                 Process proc = new Process();
-                // Запускаем Блокнот
+                // Запускаємо Блокнот
                 proc.StartInfo.FileName = "Notepad.exe";
                 proc.StartInfo.Arguments = Application.ExecutablePath;
                 proc.Start();
@@ -108,20 +108,20 @@ namespace ProcessList
         private void button5_Click(object sender, EventArgs e)
         {
             try
-            {           
-                // Открываем изображение в приложении по умолчанию
+            {
+                // Відкриваємо зображення у додатку за замовчуванням
                 ProcessStartInfo procInfo = new ProcessStartInfo();
                 procInfo.FileName = "cat.jpg";
                 procInfo.UseShellExecute = true;
                 Process.Start(procInfo);
 
-                // Запускаем браузер Chrome с заданным адресом
+                // Запускаємо браузер Chrome із заданою адресою
                 procInfo = new ProcessStartInfo(@"C:\Program Files\Google\Chrome\Application\chrome.exe");
                 procInfo.UseShellExecute = false;
                 procInfo.Arguments = "https://www.microsoft.com/uk-ua";
                 Process.Start(procInfo);
 
-                // Запускаем браузер MSEdge с заданным адресом
+                // Запускаємо браузер MSEdge із заданою адресою
                 procInfo = new ProcessStartInfo("msedge.exe");
                 procInfo.UseShellExecute = true;
                 procInfo.Arguments = "https://www.microsoft.com/uk-ua";
@@ -137,13 +137,13 @@ namespace ProcessList
         {
             try
             {
-                // Получаем коллекцию процессов Notepad
+                // Отримуємо колекцію процесів Notepad
                 Process[] procs = Process.GetProcessesByName("Notepad");
-                MessageBox.Show("Всего : " + procs.Length.ToString());
+                MessageBox.Show("Усього : " + procs.Length.ToString());
                 int i = 0;
                 while (i != procs.Length)
                 {
-                    procs[i].Kill();// останавливаем процесс
+                    procs[i].Kill();// зупиняємо процес
                     i++;
                 }
             }
